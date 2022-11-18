@@ -1,32 +1,107 @@
-@import "colors.less";
-@import "fonts.less";
+@fonts: 'https://fonts.googleapis.com';
+@import url('@{fonts}/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@import url('@{fonts}/css2?family=Syncopate:wght@700&display=swap');
+
+@import 'colors.less';
+@import 'fonts.less';
+
+//variables
+@full-pct: 100%;
+@line-hgt: 75px;
+
+//mixins
+.width-float-mixin() {
+  width: @full-pct;
+  float: left;
+}
+
+* {
+  box-sizing: border-box !important;
+  transition: ease all 0.5s;
+}
 
 .main-layout {
+  width: @full-pct;
+  height: @full-pct;
+  color: @color-body;
+  font-size: 1em;
+  font-family: @poppins;
+  line-height: 1.80857;
+  font-weight: normal;
+  overflow-x: hidden;
   .collection_text {
+    .width-float-mixin();
+    color: @color-text;
+    text-align: center;
+    font-family: @syncopate;
+    font-weight: bold;
+    font-size: 3em;
+    background-color: @color-text-bg;
+    padding: 30px 0px;
   }
   .about_main .layout_padding {
     .collection_section {
+      .width-float-mixin();
+      margin-top: 40px;
       .container {
         .new_text {
+          .width-float-mixin();
+          font-size: 2em;
+          color: @color-about;
         }
         .consectetur_text {
+          .width-float-mixin();
+          font-size: 1.2em;
+          color: @color-about;
+          font-weight: 400;
+          margin-left: 0px;
+          padding-bottom: 30px;
         }
       }
     }
     .collection_section_3 .layout_padding {
+      .width-float-mixin();
+      padding-top: 0px;
       .container {
         .racing_shoes {
+          .width-float-mixin();
+          background-color: @color-shoes-bg;
+          height: auto;
+          padding-top: 70px;
+          background-size: 100%;
+          padding-bottom: 100px;
+          margin-bottom: 100px;
           .row {
             .col-md-8 {
               .shoes-img3 {
+                .width-float-mixin();
+                text-align: center;
+                img {
+                  margin-top: 4em;
+                  width: 70%;
+                }
               }
             }
             .col-md-4 {
               .sale_text {
+                .width-float-mixin();
+                font-size: 3em;
+                color: @color-text-bg;
+                line-height: @line-hgt;
               }
               .number_text {
+                .width-float-mixin();
+                font-size: 3em;
+                color: @color-text-bg;
+                line-height: @line-hgt;
               }
               .seemore {
+                width: 80;
+                height: 50px;
+                color: @color-text;
+                background-color: @color-text-bg;
+                font-size: 1.7em;
+                margin-top: 35px;
               }
             }
           }
@@ -36,5 +111,12 @@
   }
 
   .copyright {
+    .width-float-mixin();
+    font-size: 1em;
+    color: @color-text;
+    text-align: center;
+    padding: 10px 0px;
+    background-color: @color-text-bg;
+    font-family: @poppins;
   }
 }
